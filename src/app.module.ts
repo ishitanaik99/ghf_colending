@@ -12,7 +12,17 @@ import { ClaMaster } from './entities/cla-master.entity';
 import { PartnerOnboardingMaster } from './entities/partner-onboarding-master.entity';
 import { ProductConfigMaster } from './entities/product-config-master.entity';
 
+import { ClmLoanApplication } from './entities/clm-loan-application.entity';
+import { ClmIndividualCustomer } from './entities/clm-individual-customer.entity';
+import { ClmCoApplicant } from './entities/clm-co-applicant.entity';
+import { ClmEntityCustomer } from './entities/clm-entity-customer.entity';
+import { ClmCollateral } from './entities/clm-collateral.entity';
+import { ClmDisbursement } from './entities/clm-disbursement.entity';
+import { ClmDocument } from './entities/clm-document.entity';
+import { ClmBankDecision } from './entities/clm-bank-decision.entity';
+
 import { AuthModule } from './auth/auth.module';
+import { SfdcIngestModule } from './sfdc-ingest/sfdc-ingest.module';
 // import { ClaMasterModule } from './cla-master/cla-master.module';
 
 @Module({
@@ -40,6 +50,14 @@ import { AuthModule } from './auth/auth.module';
           ClaMaster,
           PartnerOnboardingMaster,
           ProductConfigMaster,
+          ClmLoanApplication,
+          ClmIndividualCustomer,
+          ClmCoApplicant,
+          ClmEntityCustomer,
+          ClmCollateral,
+          ClmDisbursement,
+          ClmDocument,
+          ClmBankDecision,
         ],
         synchronize: false,
         logging: false,
@@ -47,6 +65,7 @@ import { AuthModule } from './auth/auth.module';
     }),
 
     AuthModule,
+    SfdcIngestModule,
     // ClaMasterModule,
   ],
 })
